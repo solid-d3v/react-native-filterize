@@ -16,7 +16,7 @@ export default function CustomTextInput({ value, onChange, placeholder = '' }) {
 }
 
 CustomTextInput.propTypes = {
-    onChange: PropTypes.func,
+    onChange: PropTypes.func.isRequired,
     placeholder: PropTypes.string,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
 };

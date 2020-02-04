@@ -11,6 +11,6 @@ export default function CustomSwitch({ value, onChange }) {
 }
 
 CustomSwitch.propTypes = {
-    onChange: PropTypes.func,
+    onChange: PropTypes.func.isRequired,
     value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
 };
