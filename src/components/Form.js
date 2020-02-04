@@ -1,6 +1,8 @@
 import React, { useReducer } from 'react';
 import { View, Text } from 'react-native';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
+
 import CustomSwitch from './CustomSwitch';
 import CustomTextInput from './CustomTextInput';
 import { evaluateFilters } from '../utils/utils';
@@ -45,3 +47,8 @@ export default function Form({ onChange, array, initFilterDeclaration }) {
 
     return <View>{renderItems()}</View>;
 }
+Form.propTypes = {
+    onChange: PropTypes.func,
+    array: PropTypes.array,
+    initFilterDeclaration: PropTypes.object,
+};

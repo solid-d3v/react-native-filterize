@@ -1,5 +1,6 @@
 import React from 'react';
 import { View, TextInput } from 'react-native';
+import PropTypes from 'prop-types';
 
 export default function CustomTextInput({ value, onChange, placeholder = '' }) {
     return (
@@ -13,3 +14,9 @@ export default function CustomTextInput({ value, onChange, placeholder = '' }) {
         </View>
     );
 }
+
+CustomTextInput.propTypes = {
+    onChange: PropTypes.func,
+    placeholder: PropTypes.string,
+    value: PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool]),
+};
